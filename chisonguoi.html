@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nang = prompt("Nhập Cân Nặng");
+        let cao = prompt("Nhập Chiều Cao");
+        let bmi = nang / ( cao * 2)
+         if (bmi < 18) {
+             alert("Thiếu Cân");
+        } else if (bmi < 25.0){
+             alert("Bình Thường");
+        } else if (bmi < 30.0) {
+             alert("Thừa Cân");
+        } else {
+            alert("Mập");
+        }
+    </script>
+</body>
+</html>

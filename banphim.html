@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bình Anh</title>
+</head>
+<body onload="docReady()">
+    <img src="s.jpg" id="heart" style="position: absolute; top:0; left:0" width="200px" height="200px">
+    <script> 
+        function upArrowPressed(){
+            let element=document.getElementById("heart");
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+        }
+        function downArrowPressed(){
+            let element=document.getElementById("heart");
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+        }
+        function leftArrowPressed(){
+            let element=document.getElementById("heart");
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+        }
+        function rightArrowPressed(){
+            let element=document.getElementById("heart");
+         
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+        }
+
+        function moverSelection(evt) {
+            switch (evt.keyCode) {
+                case 38:
+                    upArrowPressed();
+                    break;
+                case 37: 
+                    leftArrowPressed();
+                    break;
+                case 40:
+                    downArrowPressed();
+                    break;
+                case 39:
+                    rightArrowPressed();
+                    break;
+
+            }
+        }
+        function docReady() {
+            window.addEventListener('keydown', moverSelection);
+        }
+    </script>
+
+</body>
+</html>

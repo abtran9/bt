@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <h6>ỨNG DỤNG TÍNH SỐ NGÀY TRONG THÁNG</h6>
+<input type="text" name="" id="ngay">
+<button  type="button" onclick="thangnhap()"> Tính Ngày</button>
+<link rel="stylesheet" href="css1.css">
+<h3 id="nf"></h3>
+
+<script>
+function thangnhap() {	
+	var ngay=parseInt(document.getElementById('ngay').value);
+	switch(ngay){
+		case 1 :
+        case 3 :
+        case 5 :
+        case 7 :	
+        case 8 :	
+        case 10 :	
+        case 12 :
+        document.getElementById('nf').innerHTML = 'Tháng ' + ngay + ' có 31 ngày';
+        break;
+        case 2 :
+        document.getElementById('nf').innerHTML = 'Tháng ' + ngay + ' có 28 hoặc 29 ngày';
+        break;
+        case 4:
+        case 6:
+        case 9: 
+        case 11 : 
+        document.getElementById('nf').innerHTML = 'Tháng ' + ngay + ' có 30 ngày';
+		break;      
+        default:
+		alert('Nhập Tháng Không Đúng Mời Nhập Lại');
+	}
+	
+}
+	
+</script>
+</body>
+</html>
